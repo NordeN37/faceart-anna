@@ -1,186 +1,95 @@
 ---
-# Display name
+# Отображаемое имя
 title: Анна Попова
 
-# Name pronunciation (optional)
-name_pronunciation: Анна Попова
-
-# Full name (for SEO)
+# Полное имя (для SEO)
 first_name: Анна
 last_name: Попова
 
-# Status emoji
+# Значок статуса
 status:
-  icon: ☕️
+  icon: 🎨
 
-# Is this the primary user of the site?
+# Главный пользователь сайта?
 superuser: true
 
-# Highlight the author in author lists? (true/false)
+# Выделять имя в списках авторов?
 highlight_name: true
 
-# Role/position/tagline
-role: Chief Scientist
+# Роль/позиция
+role: Основатель и преподаватель школы аквагрима
 
-# Organizations/Affiliations to display in Biography blox
+# Организация
 organizations:
-  - name: OpenAI
-    url: https://openai.com/
+  - name: Школа аквагрима Анны Поповой
+    url: https://faceartschool.ru
 
-# Social network links
-# Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
+# Социальные сети
 profiles:
-  - icon: at-symbol
-    url: 'mailto:your-email@example.com'
-    label: E-mail Me
-  - icon: brands/x
-    url: https://twitter.com/GetResearchDev
   - icon: brands/instagram
-    url: https://www.instagram.com/
-  - icon: brands/github
-    url: https://github.com/gcushen
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/
-  - icon: academicons/orcid
-    url: https://orcid.org/
+    url: https://instagram.com/anna_faceart?utm_medium=copy_link
+  - icon: brands/telegram
+    url: https://t.me/Anna_pro_faceart
+  - icon: brands/vk
+    url: https://vk.com/ivgrim
+  - icon: brands/whatsapp
+    url: https://wa.me/+79621591759
 
+# Интересы
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Аквагрим
+  - Бодиарт
+  - Обучение детей и взрослых
+  - Онлайн-курсы и марафоны
+  - Творчество как профессия
 
-education:
-  - area: PhD Artificial Intelligence
-    institution: Stanford University
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
-    button:
-      text: 'Read Thesis'
-      url: 'https://example.com'
-  - area: MEng Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      GPA: 3.8/4.0
+# Описание главной страницы (можно отобразить через Hero Section)
+summary: |
+  Я обучаю аквагриму с нуля и до продвинутого уровня. Помогаю каждому ученику добиться успеха и получать стабильный доход от любимого дела.
 
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - area: BSc Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      GPA: 3.4/4.0
-      
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
-    company_url: ''
-    company_logo: ''
-    date_start: 2021-01-01
-    date_end: ''
-    summary: |2-
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
-    company_url: ''
-    company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+  **Запишитесь на курс и начните зарабатывать, занимаясь творчеством!**
 
-# Skills
-# Add your own SVG icons to `assets/media/icons/`
+  [📋 Подробнее о курсе](#rec307813867) | [💰 Тарифы](#rec390071000)
+  [📨 Записаться](#rec390071000)
+
+# Навыки (опционально — для отображения прогресс-бара)
 skills:
-  - name: Technical Skills
+  - name: Навыки
     items:
-      - name: Python
-        description: ''
-        percent: 80
-        icon: code-bracket
-      - name: Data Science
-        description: ''
+      - name: Аквагрим
         percent: 100
-        icon: chart-bar
-      - name: SQL
-        description: ''
-        percent: 40
-        icon: circle-stack
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
+        icon: paintbrush
+      - name: Бодиарт
+        percent: 90
+        icon: palette
+      - name: Онлайн-обучение
+        percent: 95
+        icon: display
+  - name: Хобби
+    color: '#ff69b4'
+    color_border: '#ff1493'
     items:
-      - name: Hiking
-        description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Cats
-        description: ''
-        percent: 100
-        icon: cat
-      - name: Photography
-        description: ''
+      - name: Путешествия
         percent: 80
-        icon: camera
+        icon: suitcase
+      - name: Танцы
+        percent: 70
+        icon: music
+      - name: Искусство
+        percent: 100
+        icon: pen-nib
 
+# Языки
 languages:
-  - name: English
+  - name: Русский
     percent: 100
-  - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+  - name: Английский
+    percent: 60
 
-# Awards.
-#   Add/remove as many awards below as you like.
-#   Only `title`, `awarder`, and `date` are required.
-#   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
-awards:
-  - title: Neural Networks and Deep Learning
-    url: https://www.coursera.org/learn/neural-networks-deep-learning
-    date: '2023-11-25'
-    awarder: Coursera
-    icon: coursera
-    summary: |
-      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
-  - title: Blockchain Fundamentals
-    url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-    date: '2023-07-01'
-    awarder: edX
-    icon: edx
-    summary: |
-      Learned:
-      - Synthesize your own blockchain solutions
-      - Gain an in-depth understanding of the specific mechanics of Bitcoin
-      - Understand Bitcoin’s real-life applications and learn how to attack and destroy Bitcoin, Ethereum, smart contracts and Dapps, and alternatives to Bitcoin’s Proof-of-Work consensus algorithm
-  - title: 'Object-Oriented Programming in R'
-    url: https://www.datacamp.com/courses/object-oriented-programming-with-s3-and-r6-in-r
-    certificate_url: https://www.datacamp.com
-    date: '2023-01-21'
-    awarder: datacamp
-    icon: datacamp
-    summary: |
-      Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
+# Главное изображение (если поддерживается темой)
+image: https://static.tildacdn.com/tild3665-3738-4761-a565-346135646562/1.jpg
 ---
 
-## About Me
+## Добро пожаловать!
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+🎨 *Школа аквагрима Анны Поповой* — это место, где ваше хобби становится профессией. Мы обучаем с нуля, помогаем найти клиентов и начать зарабатывать. Станьте мастером аквагрима вместе с нами!
