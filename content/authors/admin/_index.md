@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 吳健雄
+title: Анна Попова
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: Анна Попова
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Анна
+last_name: Попова
 
 # Status emoji
 status:
