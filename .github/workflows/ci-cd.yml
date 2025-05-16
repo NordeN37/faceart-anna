@@ -35,4 +35,4 @@ jobs:
             sudo docker pull norden37/faceart-anna:latest
             sudo docker stop faceart-anna || true
             sudo docker rm faceart-anna || true
-            docker run -d --name faceart-anna -p 1313:1313 -p 4001:4001 -v $(pwd):/src faceart-anna
+            sudo docker run -d --name faceart-anna -p 1313:1313 -p 4001:4001 -v $(pwd):/src faceart-anna
