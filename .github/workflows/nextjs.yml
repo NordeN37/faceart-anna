@@ -78,8 +78,14 @@ jobs:
           TINA_PUBLIC_CLIENT_ID: "ec1fded3-a9ad-4f05-9c5f-0b3dcfdb1ef4"
           TINA_TOKEN: "141bbcc9da0a44d537220247522b7b194b27a20d"
         run: ${{ steps.detect-package-manager.outputs.runner }} tinacms build
-      - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build && ${{ steps.detect-package-manager.outputs.runner }} next export
+      - name: Build Next.js
+        run: |
+          if [ ! -d "app" ] && [ ! -d "pages" ]; then
+            echo "ERROR: No pages or app directory found!"
+            exit 1
+          fi
+
+          yarn next build && yarn next export
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
