@@ -1,23 +1,21 @@
-# Используем образ Node.js + устанавливаем Hugo
-FROM node:20-alpine
+# Stage 1: Builder with more space
+FROM node:20 as builder
 
-# Устанавливаем Hugo (используем версию 0.125.7, как в вашем первом варианте)
+# Install Hugo
 RUN wget -O /tmp/hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v0.125.7/hugo_0.125.7_Linux-ARM64.tar.gz && \
     tar -xzf /tmp/hugo.tar.gz -C /tmp && \
     mv /tmp/hugo /usr/local/bin/ && \
     rm /tmp/hugo.tar.gz
 
 WORKDIR /app
-
-# Копируем зависимости и устанавливаем их
-COPY package.json yarn.lock* ./
+COPY . .
 RUN yarn install --frozen-lockfile
 
-# Копируем весь проект
-COPY . .
+# Stage 2: Final image
+FROM node:20-alpine
+COPY --from=builder /usr/local/bin/hugo /usr/local/bin/hugo
+COPY --from=builder /app /app
+WORKDIR /app
 
-# Указываем порт
 EXPOSE 1313
-
-# Запускаем TinaCMS + Hugo
 CMD ["yarn", "dev"]
