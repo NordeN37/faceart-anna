@@ -28,7 +28,7 @@ jobs:
       - name: Run sshpass commands
         uses: matheusvanzan/sshpass-action@v2
         with:
-          host: ${{ vars.SERVER_HOST }}
+          host: ${{ secrets.SERVER_HOST }}
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PASSWORD }}
           run: |
