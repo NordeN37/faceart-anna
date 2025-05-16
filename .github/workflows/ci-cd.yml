@@ -1,0 +1,41 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Build and Push Docker Images
+        run: |
+          docker build -t faceart-anna .
+          docker tag faceart-anna:latest norden37/faceart-anna:latest
+          docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{ secrets.DOCKER_PASS }}
+          docker push norden37/faceart-anna:latest
+
+  deploy:
+    needs: build  # This ensures deploy runs only after build finishes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run sshpass commands
+        uses: matheusvanzan/sshpass-action@v2
+        with:
+          host: ${{ vars.SERVER_HOST }}
+          user: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PASSWORD }}
+          run: |
+            sudo docker pull norden37/faceart-anna:latest
+            sudo docker stop faceart-anna || true
+            sudo docker rm faceart-anna || true
+            sudo docker run -d \
+              --name faceart-anna \
+              -p 1313:1313 \
+              norden37/faceart-anna:latest
