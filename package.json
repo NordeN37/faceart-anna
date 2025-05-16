@@ -4,7 +4,7 @@
   "description": "[![Screenshot](.github/preview.webp)](https://hugoblox.com/templates/)",
   "main": "index.js",
   "scripts": {
-    "dev": "tinacms dev -c \"hugo server -D\"",
+    "dev": "tinacms dev -c \"hugo server -D --bind 0.0.0.0 --baseURL http://localhost:1313\"",
     "build": "tinacms build && hugo"
   },
   "keywords": [],
