@@ -90,7 +90,7 @@ jobs:
           TINA_TOKEN: "141bbcc9da0a44d537220247522b7b194b27a20d"
         run: ${{ steps.detect-package-manager.outputs.runner }} tinacms build
       - name: Build Next.js
-        run: yarn next build && yarn next export
+        run: yarn next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
